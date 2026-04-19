@@ -1,29 +1,33 @@
-// Typing effect setup
 document.addEventListener('DOMContentLoaded', function() {
-    var typed = new Typed('#typed', {
+    new Typed('#typed', {
         strings: [
             "Connecting to Saumya's heart...",
-            "Searching for the perfect song...",
+            "Searching for my Cutee 🙂...",
             "Found it: Banjaare ❤️",
-            "I Love You So Much Saumya!"
+            "I Love You Meri Pagli!",
+            // Ye special span class se text colorful aur bold banega
+            "<span class='final-wish'>Chummi to dedo pagli meri 🙂</span>"
         ],
         typeSpeed: 60,
         backSpeed: 30,
-        loop: true
+        loop: false,
+        contentType: 'html' // Isse HTML tags kaam karenge
     });
 });
 
-// Music function setup
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart-rain');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 5000);
+}
+
 function startExperience() {
-    var audio = document.getElementById("loveMusic");
-    
-    // Alert pehle taaki pata chale button kaam kar raha hai
+    const audio = document.getElementById("loveMusic");
+    audio.play().catch(e => console.log("Music error"));
     alert("Surprise for Saumya! ❤️");
-    
-    audio.play().then(() => {
-        console.log("Music playing successfully");
-    }).catch(function(error) {
-        console.log("Music play failed:", error);
-        alert("Please tap again to unlock music!");
-    });
+    setInterval(createHeart, 300);
 }
