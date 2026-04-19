@@ -1,12 +1,37 @@
-body { background: #000; height: 100vh; display: flex; justify-content: center; align-items: center; font-family: 'Poppins', sans-serif; overflow: hidden; }
-.glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255, 0, 85, 0.3); padding: 50px; border-radius: 25px; text-align: center; box-shadow: 0 0 40px rgba(255, 0, 85, 0.2); }
-.neon-text { font-family: 'Orbitron', sans-serif; color: #fff; text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055; letter-spacing: 5px; }
-.pink { color: #ff0055; font-weight: bold; }
-.typing-box { margin: 20px 0; color: #00f2ff; font-weight: bold; font-size: 1.2rem; }
-.heart { width: 50px; height: 50px; background: #ff0055; position: relative; transform: rotate(-45deg); margin: 30px auto; animation: beat 0.6s infinite; box-shadow: 0 0 30px #ff0055; }
-.heart:before, .heart:after { content: ''; width: 50px; height: 50px; background: #ff0055; border-radius: 50%; position: absolute; }
-.heart:before { top: -25px; left: 0; }
-.heart:after { left: 25px; top: 0; }
-@keyframes beat { 0% { transform: rotate(-45deg) scale(1); } 50% { transform: rotate(-45deg) scale(1.2); } 100% { transform: rotate(-45deg) scale(1); } }
-.btn { background: transparent; border: 2px solid #ff0055; color: #ff0055; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.5s; margin-top: 20px; }
-.btn:hover { background: #ff0055; color: #fff; box-shadow: 0 0 20px #ff0055; }
+/* Final Wish ka Ultra Stylish Look */
+.final-wish {
+    font-size: 2rem; /* Sabse bada text */
+    font-weight: 900; /* Ekdum Bold */
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase; /* Sab Capital */
+    letter-spacing: 2px;
+    color: #fff;
+    /* Neon Glow Effect */
+    text-shadow: 
+        0 0 10px #ff0055,
+        0 0 20px #ff0055,
+        0 0 40px #ff0055,
+        0 0 80px #ff0055;
+    /* RGB Colorful Animation */
+    animation: rgbGlow 2s linear infinite, finalPulse 1s ease-in-out infinite alternate;
+}
+
+/* RGB Colorful Glow Animation */
+@keyframes rgbGlow {
+    0%, 100% { text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055; }
+    33% { text-shadow: 0 0 20px #00e6ff, 0 0 40px #00e6ff; }
+    66% { text-shadow: 0 0 20px #ccff00, 0 0 40px #ccff00; }
+}
+
+/* Pulse effect taaki message dharakta hua dikhe */
+@keyframes finalPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* Pehle wala Typing effects theek rahein */
+#typed {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 230, 255, 0.7);
+}
