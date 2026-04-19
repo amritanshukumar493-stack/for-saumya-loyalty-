@@ -1,37 +1,29 @@
-/* Final Wish ka Ultra Stylish Look */
 .final-wish {
-    font-size: 2rem; /* Sabse bada text */
-    font-weight: 900; /* Ekdum Bold */
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase; /* Sab Capital */
-    letter-spacing: 2px;
-    color: #fff;
-    /* Neon Glow Effect */
-    text-shadow: 
-        0 0 10px #ff0055,
-        0 0 20px #ff0055,
-        0 0 40px #ff0055,
-        0 0 80px #ff0055;
-    /* RGB Colorful Animation */
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
     animation: rgbGlow 2s linear infinite, finalPulse 1s ease-in-out infinite alternate;
 }
 
-/* RGB Colorful Glow Animation */
 @keyframes rgbGlow {
-    0%, 100% { text-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055; }
-    33% { text-shadow: 0 0 20px #00e6ff, 0 0 40px #00e6ff; }
-    66% { text-shadow: 0 0 20px #ccff00, 0 0 40px #ccff00; }
+    0%, 100% { color: #ff0055; text-shadow: 0 0 20px #ff0055; }
+    33% { color: #00e6ff; text-shadow: 0 0 20px #00e6ff; }
+    66% { color: #ccff00; text-shadow: 0 0 20px #ccff00; }
 }
 
-/* Pulse effect taaki message dharakta hua dikhe */
 @keyframes finalPulse {
     from { transform: scale(1); }
-    to { transform: scale(1.05); }
+    to { transform: scale(1.1); }
 }
 
-/* Pehle wala Typing effects theek rahein */
-#typed {
-    font-family: 'Orbitron', sans-serif;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 230, 255, 0.7);
+.heart-rain {
+    position: fixed;
+    top: -10%;
+    font-size: 1.5rem;
+    z-index: 999;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
 }
