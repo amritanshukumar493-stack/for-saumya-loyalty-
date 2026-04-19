@@ -5,13 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
             "Searching for my Cutee 🙂...",
             "Found it: Banjaare ❤️",
             "I Love You Meri Pagli!",
-            // Ye special span class se text colorful aur bold banega
             "<span class='final-wish'>Chummi to dedo pagli meri 🙂</span>"
         ],
         typeSpeed: 60,
         backSpeed: 30,
         loop: false,
-        contentType: 'html' // Isse HTML tags kaam karenge
+        contentType: 'html'
     });
 });
 
@@ -31,4 +30,3 @@ function startExperience() {
     alert("Surprise for Saumya! ❤️");
     setInterval(createHeart, 300);
 }
-
